@@ -1,0 +1,8 @@
+zip example.zip main.js
+
+aws2 s3api create-bucket --bucket yrzhang-lambda-serverless-example --region ap-east-1 --create-bucket-configuration LocationConstraint=ap-east-1
+
+aws2 s3 cp example.zip s3://yrzhang-lambda-serverless-example/v1.0.0/example.zip
+
+aws lambda invoke --region=ap-east-1 --function-name=ServerlessExample output.txt
+
