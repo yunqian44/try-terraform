@@ -1,0 +1,5 @@
+dotnet new -i Amazon.Lambda.Templates
+
+dotnet tool install -g Amazon.Lambda.Tools
+
+dotnet lambda
