@@ -8,6 +8,7 @@ resource "aws_instance" "example" {
   instance_type = "t3.micro"
 
   tags = {
-    name = "test"
+    name = "test",
+    tag = "tag1"
   }
 }
