@@ -14,6 +14,13 @@ Security Group for instance
 
 6. Terraform multiple environments
 
+7. locals ?
+
+8. Whole env whole service in one cluster?
+
+9. 
+
+
 ACL?
 
 Route table
