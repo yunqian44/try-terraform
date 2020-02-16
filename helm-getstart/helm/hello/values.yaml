@@ -1,4 +1,4 @@
-environment: Production 
+environment: Staging
 user: k8s/user
 
 label:
@@ -6,8 +6,8 @@ label:
 
 container:
   name: helloapp 
-  pullPolicy: Never
-  image: hello 
+  pullPolicy: IfNotPresent 
+  image: 332679337602.dkr.ecr.ap-east-1.amazonaws.com/hello 
   tag: v1
   port: 80
 replicas: 2

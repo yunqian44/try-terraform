@@ -1,0 +1,36 @@
+## build image
+docker build -t hello:v1 -f HelloWorld/Dockerfile .
+
+## remove unused temp image
+docker rmi $(docker images -f "dangling=true" -q) --force
+
+## run image
+docker run --env ASPNETCORE_ENVIRONMENT=Test --env User=docker -it -p 50020:80 hello:v1
+
+## Url
+http:localhost:50020/info
+
+## login ecr
+$(aws ecr get-login --no-include-email --region ap-east-1)
+
+## docker push 
+docker push 332679337602.dkr.ecr.ap-east-1.amazonaws.com/hello:v1
+
+## helm install
+helm install hellov1 ./hello
+
+## helm ls
+helm ls
+
+## kubectl get all
+kubectl get all --selector app=hello
+
+## Port forward from cluster to local 9090
+kubectl port-forward service/hellov1-service 9090:8080
+
+## helm upgrade
+helm upgrade hellov1 hello/
+
+## helm uninstall
+helm uninstall hellov1
+
