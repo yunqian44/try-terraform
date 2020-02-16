@@ -18,7 +18,7 @@ Security Group for instance
 
 8. Whole env whole service in one cluster?
 
-9. 
+9. EKS node role & ECR permission?
 
 
 ACL?
