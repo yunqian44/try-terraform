@@ -1,0 +1,17 @@
+environment: Production 
+user: k8s/user
+
+label:
+  name: hello 
+
+container:
+  name: helloapp 
+  pullPolicy: Never
+  image: hello 
+  tag: v1
+  port: 80
+replicas: 2
+
+service:
+  port: 8080 
+  type: ClusterIP
