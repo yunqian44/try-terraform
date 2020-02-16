@@ -1,0 +1,9 @@
+## build image
+docker build -t hello:v1 -f HelloWorld/Dockerfile .
+
+
+## remove unused temp image
+docker rmi $(docker images -f "dangling=true" -q) --force
+
+## run image
+docker run -it -p 50020:80 hello:v1 
