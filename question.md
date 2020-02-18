@@ -20,6 +20,9 @@ Security Group for instance
 
 9. EKS node role & ECR permission?
 
+10. loadbalancer & target group?
+
+
 
 ACL?
 
