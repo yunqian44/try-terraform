@@ -22,6 +22,8 @@ Security Group for instance
 
 10. loadbalancer & target group?
 
+11. Two subnets in different AZ, how it works? when one of the AZ is down?
+
 
 
 ACL?
