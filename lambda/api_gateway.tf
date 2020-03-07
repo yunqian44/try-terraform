@@ -1,3 +1,7 @@
+data "aws_lambda_function" "example" {
+  function_name = "ServerlessExample"
+}
+
 resource "aws_api_gateway_rest_api" "example" {
   name        = "ServerlessExample"
   description = "Terraform Serverless Application Example"
